@@ -1257,14 +1257,14 @@ def iqinddelantero(df, j1, equipo, pos):
     return fig
 
 
-st.title('Análisis de Jugadores')
+st.title('Análisis de Jugadoras')
 
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
 creds = ServiceAccountCredentials.from_json_keyfile_name('credentials.json', scope)
 client = gspread.authorize(creds)
 
 
-file_key = '13hOEzyecNB-3SdKE3qnIHKRPRWtkTqdz66VHEhqdtWA'
+file_key = '1iWrPee1DPhN9S-s7V-yLMkpe-oi-m_ildV6iP52YoWI'
 
 
 sheet = client.open_by_key(file_key).sheet1
@@ -1297,13 +1297,13 @@ else:
 
 
 posicion_funciones = {
-"Portero": iqindportero,
+"Portera": iqindportero,
 "Central": iqindcentral,
 "Lateral": iqindlateral,
 "Contención": iqindcontencion,
 "Extremo": iqindvolante,
 "Mediapunta": iqindvolante,
-"Delantero": iqinddelantero
+"Delantera": iqinddelantero
 }
 
 #if st.button("Generar Análisis"):
