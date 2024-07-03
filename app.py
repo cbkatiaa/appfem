@@ -15,6 +15,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 #from pydrive.drive import GoogleDrive
 import requests
 from io import BytesIO
+from google.oauth2.service_account import Credentials
 
 
 
@@ -1260,7 +1261,7 @@ def iqinddelantero(df, j1, equipo, pos):
 st.title('Análisis de Jugadoras')
 
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-creds = ServiceAccountCredentials.from_json_keyfile_name('credentials.json', scope)
+creds = Credentials.from_json_keyfile_name('credentials.json', scope)
 client = gspread.authorize(creds)
 
 
