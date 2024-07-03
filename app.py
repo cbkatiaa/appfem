@@ -1261,7 +1261,7 @@ def iqinddelantero(df, j1, equipo, pos):
 st.title('Análisis de Jugadoras')
 
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-creds = Credentials.from_json_keyfile_name('credentials.json', scope)
+creds = ServiceAccount.from_json_keyfile_name('credentials.json', scope)
 client = gspread.authorize(creds)
 
 
