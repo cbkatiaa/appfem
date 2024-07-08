@@ -18,6 +18,8 @@ from io import BytesIO
 from google.oauth2.service_account import Credentials
 from dotenv import load_dotenv
 import json
+from streamlit_gsheets import GSheetsConnection
+
 
 
 
