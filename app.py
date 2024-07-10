@@ -1270,7 +1270,7 @@ st.title('Análisis de Jugadores')
 #conn = st.connection("gsheets", type=GSheetsConnection)
 #df = conn.read()
 
-df = pd.read_csv(f'https://raw.githubusercontent.com/cbkatiaa/app/main/jugadoras.csv')
+df = pd.read_csv(f'https://raw.githubusercontent.com/cbkatiaa/appfem/main/jugadoras.csv')
 
 
 
