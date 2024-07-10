@@ -22,7 +22,7 @@ import json
 
 
 
-def iqindportero(df, j1, pos):
+def iqindportero(df, j1, equipo, pos):
     c = 'white'
     fig = plt.figure(frameon=False, edgecolor='#293A4A')
     fig.set_figheight(18)
@@ -158,7 +158,7 @@ def iqindportero(df, j1, pos):
     return fig
 
 
-def iqindcentral(df, j1, pos):
+def iqindcentral(df, j1, equipo, pos):
     c='white'
     fig = plt.figure(frameon=False, edgecolor='#293A4A')
     fig.set_figheight(18)
