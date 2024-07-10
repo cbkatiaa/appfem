@@ -1261,7 +1261,7 @@ def iqinddelantero(df, j1, equipo, pos):
     return fig
 
 
-st.title('Análisis de Jugadores')
+st.title('Análisis de Jugadoras')
 
 #scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
 #creds = ServiceAccountCredentials.from_json_keyfile_name('credentials.json', scope)
@@ -1296,7 +1296,7 @@ posicion_seleccionada = st.selectbox("Selecciona la posición", posiciones)
 
 df_filtrado = df[(df['Season'] == temporada_seleccionada) & (df['Primary Position'] == posicion_seleccionada)]
 jugadores = df_filtrado['Name'].unique()
-jugador_seleccionado = st.selectbox("Seleccione al jugador", jugadores)
+jugador_seleccionado = st.selectbox("Seleccione a la jugadora", jugadores)
 
 equipos_jugador = df_filtrado[df_filtrado['Name'] == jugador_seleccionado]['Team'].unique()
 equipo_seleccionado = None
