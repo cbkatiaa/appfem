@@ -1276,7 +1276,7 @@ st.title('Análisis de Jugadoras')
 
 
 #df = pd.DataFrame(sheet.get_all_records())
-df = pd.read_csv(f'https://raw.githubusercontent.com/cbkatiaa/app/main/jugadoras.csv')
+df = pd.read_csv(f'https://raw.githubusercontent.com/cbkatiaa/appfem/main/jugadoras.csv')
 
 
 temporadas = df['Season'].unique()
