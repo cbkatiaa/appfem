@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -11,14 +12,13 @@ import os
 #from google.colab import drive
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+from google.oauth2.service_account import Credentials
 #from pydrive.auth import GoogleAuth
 #from pydrive.drive import GoogleDrive
 import requests
 from io import BytesIO
-from google.oauth2.service_account import Credentials
 from dotenv import load_dotenv
 import json
-
 
 
 
@@ -1261,22 +1261,28 @@ def iqinddelantero(df, j1, equipo, pos):
     return fig
 
 
-st.title('Análisis de Jugadoras')
+st.title('Análisis de Jugadores')
 
 #scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-#creds = ServiceAccount.from_json_keyfile_name('credentials.json', scope)
+#creds = ServiceAccountCredentials.from_json_keyfile_name('credentials.json', scope)
 #client = gspread.authorize(creds)
 
+#conn = st.connection("gsheets", type=GSheetsConnection)
+#df = conn.read()
 
-#file_key = '1iWrPee1DPhN9S-s7V-yLMkpe-oi-m_ildV6iP52YoWI'
+df = pd.read_csv(f'https://raw.githubusercontent.com/cbkatiaa/app/main/jugadores.csv')
 
 
-#sheet = client.open_by_key(file_key).sheet1
+
+
+#file_key = '13hOEzyecNB-3SdKE3qnIHKRPRWtkTqdz66VHEhqdtWA'
+
+
+#sheet = client.open_by_key(sheets_key).sheet1
 
 
 
 #df = pd.DataFrame(sheet.get_all_records())
-df = pd.read_csv(f'https://raw.githubusercontent.com/cbkatiaa/appfem/main/jugadoras.csv')
 
 
 temporadas = df['Season'].unique()
@@ -1302,13 +1308,13 @@ else:
 
 
 posicion_funciones = {
-"Portera": iqindportero,
+"Portero": iqindportero,
 "Central": iqindcentral,
 "Lateral": iqindlateral,
 "Contención": iqindcontencion,
 "Extremo": iqindvolante,
 "Mediapunta": iqindvolante,
-"Delantera": iqinddelantero
+"Delantero": iqinddelantero
 }
 
 #if st.button("Generar Análisis"):
@@ -1371,3 +1377,4 @@ if st.button("Generar Análisis"):
     #st.pyplot(fig)
     #else:
      #   st.error(f"No hay una función de gráficos definida para la posición: {posicion_seleccionada}")
+
