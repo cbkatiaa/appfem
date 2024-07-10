@@ -1270,7 +1270,7 @@ st.title('Análisis de Jugadores')
 #conn = st.connection("gsheets", type=GSheetsConnection)
 #df = conn.read()
 
-df = pd.read_csv(f'https://raw.githubusercontent.com/cbkatiaa/app/main/jugadores.csv')
+df = pd.read_csv(f'https://raw.githubusercontent.com/cbkatiaa/app/main/jugadoras.csv')
 
 
 
@@ -1308,13 +1308,13 @@ else:
 
 
 posicion_funciones = {
-"Portero": iqindportero,
+"Portera": iqindportero,
 "Central": iqindcentral,
 "Lateral": iqindlateral,
 "Contención": iqindcontencion,
 "Extremo": iqindvolante,
 "Mediapunta": iqindvolante,
-"Delantero": iqinddelantero
+"Delantera": iqinddelantero
 }
 
 #if st.button("Generar Análisis"):
