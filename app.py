@@ -1264,19 +1264,20 @@ def iqinddelantero(df, j1, equipo, pos):
 
 st.title('Análisis de Jugadoras')
 
-scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-creds = ServiceAccount.from_json_keyfile_name('credentials.json', scope)
-client = gspread.authorize(creds)
+#scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+#creds = ServiceAccount.from_json_keyfile_name('credentials.json', scope)
+#client = gspread.authorize(creds)
 
 
-file_key = '1iWrPee1DPhN9S-s7V-yLMkpe-oi-m_ildV6iP52YoWI'
+#file_key = '1iWrPee1DPhN9S-s7V-yLMkpe-oi-m_ildV6iP52YoWI'
 
 
-sheet = client.open_by_key(file_key).sheet1
+#sheet = client.open_by_key(file_key).sheet1
 
 
 
-df = pd.DataFrame(sheet.get_all_records())
+#df = pd.DataFrame(sheet.get_all_records())
+df = pd.read_csv(f'https://raw.githubusercontent.com/cbkatiaa/app/main/jugadoras.csv')
 
 
 temporadas = df['Season'].unique()
