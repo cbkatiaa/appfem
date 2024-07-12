@@ -299,7 +299,7 @@ def iqindcentral(df, j1, equipo, pos):
     df['Pases largos por pases']=df['Long balls per pass'].rank(pct=True)
     df['% pases con zurdo']=df['L/R Footedness%']/100
 
-    df = df.loc[df['Name'] == j1]
+    df = df.loc[df['Name2'] == j1]
     df = df.set_index('Name').transpose()
    
 
@@ -515,7 +515,7 @@ def iqindlateral(df, j1, equipo, pos):
     df['% pases con zurdo']=df['L/R Footedness%']/100
 
 
-    df = df.loc[df['Name'] == j1]
+    df = df.loc[df['Name2'] == j1]
     df = df.set_index('Name').transpose()
 
     ax0.axis('off')
@@ -729,7 +729,7 @@ def iqindcontencion(df, j1, equipo, pos):
     df['% pases con zurdo']=df['L/R Footedness%']/100
 
 
-    df = df.loc[df['Name'] == j1]
+    df = df.loc[df['Name2'] == j1]
     df = df.set_index('Name').transpose()
 
     ax0.axis('off')
@@ -945,7 +945,7 @@ def iqindvolante(df, j1, equipo, pos):
     df['% pases con zurdo']=df['L/R Footedness%']/100
 
 
-    df = df.loc[df['Name'] == j1]
+    df = df.loc[df['Name2'] == j1]
     df = df.set_index('Name').transpose()
 
     ax0.axis('off')
@@ -1186,7 +1186,7 @@ def iqinddelantero(df, j1, equipo, pos):
       #  return None
 
 
-    df = df.loc[df['Name'] == j1]
+    df = df.loc[df['Name2'] == j1]
     df = df.set_index('Name').transpose()
 
     ax0.axis('off')
