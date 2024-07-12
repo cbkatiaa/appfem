@@ -44,7 +44,6 @@ def iqindportero(df, j1, equipo, pos):
         
         img_url = df.loc[df['Name'] == j1, 'Image key'].iloc[0]
         
-        # Verifica que img_url no esté vacío
         if img_url:
             #st.text(f"Intentando cargar imagen desde: {img_url}")
             response = requests.get(img_url)
