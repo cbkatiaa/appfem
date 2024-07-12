@@ -97,7 +97,7 @@ def iqindportero(df, j1, equipo, pos):
     
 
 
-    dff=df.loc[df['Name2']==j1]
+    dff=df.loc[df['Name']==j1]
     #dff = df[(df['Name'] == j1) & (df['Team'] == equipo)]
     df=df.set_index('Name2')
     df=df.transpose()
