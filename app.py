@@ -151,7 +151,7 @@ def iqindportero(df, j1, equipo, pos):
     j1 = j1.upper()
     #j1 = df["Name2"].upper()
     pos = pos.upper()
-    header_text = df.loc['Name2', j1].upper()
+    header_text = df.loc['Name2', j1].values[0].upper()
     plt.figtext(0.05, 0.98, j1, c='#151616', fontsize=56, fontweight='bold', fontname='arial')
     plt.figtext(0.05, 0.94, pos, c='#151616', fontsize=40, fontweight='bold', fontname='arial')
 
