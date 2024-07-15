@@ -1033,9 +1033,9 @@ def iqinddelantero(df, j1, equipo, pos):
     ax3 = plt.subplot2grid(shape=(sh, 7), loc=(21, 0), colspan=4, rowspan=7)
     ax4 = plt.subplot2grid(shape=(sh, 7), loc=(28, 0), colspan=4, rowspan=3)
     ax5 = plt.subplot2grid(shape=(sh, 7), loc=(31, 0), colspan=4, rowspan=4)
-    ax6 = plt.subplot2grid(shape=(sh, 7), loc=(2, 4), colspan=3, rowspan=1)
-    ax7 = plt.subplot2grid(shape=(sh, 7), loc=(3, 4), colspan=3, rowspan=13)
-    ax8 = plt.subplot2grid(shape=(sh, 7), loc=(19, 4), colspan=3, rowspan=1)
+    ax6 = plt.subplot2grid(shape=(sh, 7), loc=(2, 5), colspan=4, rowspan=2)
+    ax7 = plt.subplot2grid(shape=(sh, 7), loc=(3, 4), colspan=3, rowspan=12)
+    ax8 = plt.subplot2grid(shape=(sh, 7), loc=(19, 5), colspan=4, rowspan=2)
     ax9 = plt.subplot2grid(shape=(sh, 7), loc=(20, 4), colspan=3, rowspan=13)
     fig.subplots_adjust(left=0.1,
                         bottom=0.1,
