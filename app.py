@@ -1271,8 +1271,8 @@ st.title('Análisis de Jugadoras')
 #conn = st.connection("gsheets", type=GSheetsConnection)
 #df = conn.read()
 
-df = pd.read_csv(f'https://raw.githubusercontent.com/cbkatiaa/appfem/main/jugadoras.csv')
-#,  encoding='latin-1'
+df = pd.read_csv(f'https://raw.githubusercontent.com/cbkatiaa/appfem/main/jugadoras.csv',  encoding='latin-1')
+
 
 
 
