@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-
-
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -1271,7 +1269,7 @@ st.title('Análisis de Jugadoras')
 #conn = st.connection("gsheets", type=GSheetsConnection)
 #df = conn.read()
 
-df = pd.read_csv(f'https://raw.githubusercontent.com/cbkatiaa/appfem/main/jugadoras.csv',sep=',', encoding='latin-1')
+df = pd.read_csv(f'https://raw.githubusercontent.com/cbkatiaa/appfem/main/jugadoras.csv',sep=',')
 
 
 
