@@ -384,9 +384,12 @@ def iqindlateral(df, j1, equipo, pos):
     ax3 = plt.subplot2grid(shape=(sh, 7), loc=(21, 0), colspan=4, rowspan=4)
     ax4 = plt.subplot2grid(shape=(sh, 7), loc=(25, 0), colspan=4, rowspan=5)
     ax5 = plt.subplot2grid(shape=(sh, 7), loc=(30, 0), colspan=4, rowspan=5)
-    ax6 = plt.subplot2grid(shape=(sh, 7), loc=(2, 5), colspan=4, rowspan=2)
+    ax6 = plt.subplot2grid(shape=(sh, 7), loc=(2, 4), colspan=3, rowspan=1)
     ax7 = plt.subplot2grid(shape=(sh, 7), loc=(3, 4), colspan=3, rowspan=12)
-    ax8 = plt.subplot2grid(shape=(sh, 7), loc=(18, 5), colspan=4, rowspan=2)
+    ax8 = plt.subplot2grid(shape=(sh, 7), loc=(18, 4), colspan=3, rowspan=1)
+    #ax6 = plt.subplot2grid(shape=(sh, 7), loc=(2, 4), colspan=3, rowspan=1)
+    #ax7 = plt.subplot2grid(shape=(sh, 7), loc=(3, 4), colspan=3, rowspan=12)
+    #ax8 = plt.subplot2grid(shape=(sh, 7), loc=(18, 4), colspan=3, rowspan=1)
     ax9 = plt.subplot2grid(shape=(sh, 7), loc=(19, 4), colspan=3, rowspan=12)
     fig.subplots_adjust(left=0.1,
                         bottom=0.1,
@@ -514,7 +517,7 @@ def iqindlateral(df, j1, equipo, pos):
     df['% pases con zurdo']=df['L/R Footedness%']/100
 
 
-    df = df.loc[df['Name2'] == j1]
+    df = df.loc[df['Name'] == j1]
     df = df.set_index('Name').transpose()
 
     ax0.axis('off')
@@ -728,7 +731,7 @@ def iqindcontencion(df, j1, equipo, pos):
     df['% pases con zurdo']=df['L/R Footedness%']/100
 
 
-    df = df.loc[df['Name2'] == j1]
+    df = df.loc[df['Name'] == j1]
     df = df.set_index('Name').transpose()
 
     ax0.axis('off')
